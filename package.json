@@ -1,0 +1,18 @@
+{
+  "name": "vanilla-web-components",
+  "version": "1.0.0",
+  "description": "Learning project to understand how to write vanilla web components",
+  "main": "index.js",
+  "scripts": {
+    "server": "http-server .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "^1.0.20"
+  },
+  "devDependencies": {
+    "http-server": "^0.10.0"
+  }
+}
