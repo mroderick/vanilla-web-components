@@ -1,0 +1,9 @@
+{
+    "verbose": false,
+    "suites": ["lib/"],
+    "plugins": {
+        "local": {
+            "browsers": ["chrome"]
+        }
+    }
+}

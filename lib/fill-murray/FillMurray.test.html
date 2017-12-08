@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="../../node_modules/@webcomponents/webcomponentsjs/webcomponents-hi-sd-ce.js"></script>
+    <script src="../../node_modules/web-component-tester/browser.js"></script>
+    <script src="./FillMurray.js"></script>
+</head>
+<body>
+    <test-fixture id="fill-murray-fixture">
+        <fill-murray width="300" height="200" gray></fill-murray>
+    </test-fixture>
+    <script>
+        describe('<fill-murray>', function() {
+            const component = document.querySelector('fill-murray');
+
+            it('should render an img element in the shadowRoot', () => {
+                assert.isOk(component.shadowRoot.querySelector('img'));
+            });
+        });
+    </script>
+</body>
+</html>

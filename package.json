@@ -7,15 +7,18 @@
     "url": "https://github.com/mroderick/vanilla-web-components.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
     "start": "http-server .",
+    "postinstall": "bower install Polymer/web-component-tester --save",
+    "test": "wct"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@webcomponents/webcomponentsjs": "^1.0.20"
+    "@webcomponents/webcomponentsjs": "^1.0.20",
+    "web-component-tester": "^6.4.1"
   },
   "devDependencies": {
+    "bower": "^1.8.2",
     "http-server": "^0.10.0"
   }
 }
