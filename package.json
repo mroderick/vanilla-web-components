@@ -7,8 +7,8 @@
     "url": "https://github.com/mroderick/vanilla-web-components.git"
   },
   "scripts": {
-    "server": "http-server .",
     "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "http-server .",
   },
   "author": "",
   "license": "ISC",
