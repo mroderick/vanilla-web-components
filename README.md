@@ -15,10 +15,10 @@ Only web standards (and a polyfill) are used.
 
 |   | Support  | Standard  | Notes   |
 |---|---|---|---|
-| Custom Elements | [caniuse](https://caniuse.com/#feat=custom-elementsv1) | [Living Standard](https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements) |   |
-| `<template>` | [caniuse](https://caniuse.com/#feat=template) | [Living Standard](https://html.spec.whatwg.org/multipage/scripting.html#the-template-element) |   |
-| Shadow Dom | [caniuse](https://caniuse.com/#feat=shadowdomv1) | [Working Draft](https://www.w3.org/TR/shadow-dom/)  | [Firefox intent to ship by v60 (March 2018)](https://groups.google.com/forum/#!msg/mozilla.dev.platform/aJvUlADn-Hk/BYB52MgDBQAJ)  |
-| HTML imports  | [caniuse](https://caniuse.com/#feat=imports) | [Working Draft](https://www.w3.org/TR/html-imports/)   |   |
+| Custom Elements | [caniuse](https://caniuse.com/#feat=custom-elementsv1)<br/> [Platform Status](https://platform-status.mozilla.org/#custom-elements) | [Living Standard](https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements) |   |
+| `<template>` | [caniuse](https://caniuse.com/#feat=template)<br/> [Platform Status](https://platform-status.mozilla.org/#html-templates) | [Living Standard](https://html.spec.whatwg.org/multipage/scripting.html#the-template-element) |   |
+| Shadow Dom | [caniuse](https://caniuse.com/#feat=shadowdomv1)<br/> [Platform Status](https://platform-status.mozilla.org/#shadow-dom) | [Working Draft](https://www.w3.org/TR/shadow-dom/)  | [Firefox intent to ship by v60 (March 2018)](https://groups.google.com/forum/#!msg/mozilla.dev.platform/aJvUlADn-Hk/BYB52MgDBQAJ)  |
+| HTML imports  | [caniuse](https://caniuse.com/#feat=imports)<br/> [Platform Status](https://platform-status.mozilla.org/#html-imports) | [Working Draft](https://www.w3.org/TR/html-imports/)   |   |
 
 
 ## Polyfill
