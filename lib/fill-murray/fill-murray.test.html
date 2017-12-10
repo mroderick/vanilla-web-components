@@ -17,6 +17,15 @@
             it('should render an img element in the shadowRoot', () => {
                 assert.isOk(component.shadowRoot.querySelector('img'));
             });
+
+            it('should use width and height attributes when creating urls', () => {
+                const src = component.shadowRoot.querySelector('img').src;
+                const width = component.getAttribute('width');
+                const height = component.getAttribute('height');
+                const re = new RegExp(`.*\/${width}\/${height}$`);
+
+                assert.isOk(re.test(src));
+            });
         });
     </script>
 </body>
