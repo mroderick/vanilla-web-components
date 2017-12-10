@@ -37,6 +37,24 @@
             it('should use width, height and gray attributes when creating urls', () => {
                 components.forEach(verifyImageUrl);
             });
+
+            it('should re-render when attributes change', function() {
+                components.forEach(c => {
+                    const newWidth = '11';
+                    const newHeight = '22';
+
+                    c.setAttribute('width', newWidth);
+                    c.setAttribute('height', newHeight);
+
+                    if (c.hasAttribute('gray')) {
+                        c.removeAttribute('gray');
+                    } else {
+                        c.setAttribute('gray', '');
+                    }
+
+                    verifyImageUrl(c);
+                });
+            });
         });
     </script>
 </body>
