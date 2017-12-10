@@ -8,23 +8,34 @@
 </head>
 <body>
     <test-fixture id="fill-murray-fixture">
-        <fill-murray width="300" height="200" gray></fill-murray>
+        <fill-murray width="30" height="20" gray></fill-murray>
+        <fill-murray width="20" height="30"></fill-murray>
+        <fill-murray width="20" height="30" gray></fill-murray>
+        <fill-murray width="30" height="20"></fill-murray>
     </test-fixture>
     <script>
         describe('<fill-murray>', function() {
-            const component = document.querySelector('fill-murray');
+            const components = document.querySelectorAll('fill-murray');
 
             it('should render an img element in the shadowRoot', () => {
-                assert.isOk(component.shadowRoot.querySelector('img'));
+                components.forEach(c => {
+                    assert.isOk(c.shadowRoot.querySelector('img'));
+                });
             });
 
-            it('should use width and height attributes when creating urls', () => {
-                const src = component.shadowRoot.querySelector('img').src;
-                const width = component.getAttribute('width');
-                const height = component.getAttribute('height');
-                const re = new RegExp(`.*\/${width}\/${height}$`);
+            it('should use width, height and gray attributes when creating urls', () => {
+                components.forEach(c => {
+                    const src = c.shadowRoot.querySelector('img').src;
+                    const width = c.getAttribute('width');
+                    const height = c.getAttribute('height');
+                    const gray = c.hasAttribute('gray');
+                    const widthAndHeight = `\/${width}\/${height}$`;
+                    const re = new RegExp(`.*${gray ? '/g' : ''}${widthAndHeight}`);
 
-                assert.isOk(re.test(src));
+                    console.log(re, src, re.test(src));
+
+                    assert.isOk(re.test(src));
+                });
             });
         });
     </script>
