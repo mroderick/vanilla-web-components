@@ -14,6 +14,17 @@
         <fill-murray width="30" height="20"></fill-murray>
     </test-fixture>
     <script>
+        function verifyImageUrl(component) {
+            const src = component.shadowRoot.querySelector('img').src;
+            const width = component.getAttribute('width');
+            const height = component.getAttribute('height');
+            const gray = component.hasAttribute('gray');
+            const widthAndHeight = `\/${width}\/${height}$`;
+            const re = new RegExp(`.*${gray ? '/g' : ''}${widthAndHeight}`);
+
+            assert.isOk(re.test(src));
+        }
+
         describe('<fill-murray>', function() {
             const components = document.querySelectorAll('fill-murray');
 
@@ -24,18 +35,7 @@
             });
 
             it('should use width, height and gray attributes when creating urls', () => {
-                components.forEach(c => {
-                    const src = c.shadowRoot.querySelector('img').src;
-                    const width = c.getAttribute('width');
-                    const height = c.getAttribute('height');
-                    const gray = c.hasAttribute('gray');
-                    const widthAndHeight = `\/${width}\/${height}$`;
-                    const re = new RegExp(`.*${gray ? '/g' : ''}${widthAndHeight}`);
-
-                    console.log(re, src, re.test(src));
-
-                    assert.isOk(re.test(src));
-                });
+                components.forEach(verifyImageUrl);
             });
         });
     </script>
